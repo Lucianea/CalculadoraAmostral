@@ -1,4 +1,4 @@
-# CalculadoraAmostral
+# Calculadora Amostral R-shiny
 
 Projeto de desenvolvimento de calculadora amostral como instrumento pedagógico para auxílio ao estudante e pesquisador que necessita realizar cálculo de tamanho de amostra para sua pesquisa
 
