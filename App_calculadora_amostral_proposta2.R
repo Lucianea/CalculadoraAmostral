@@ -33,7 +33,8 @@ ui = tagList(
                sliderInput("p", "Percentual Estimado da população %:", min = 1, max = 100, value = 50,
                            step = 1),
                sliderInput("me1", "Margem de erro %:", min = 1, max = 10, value = 2,
-                           step = 1)
+                           step = 1),
+               h5(textOutput("counter"))
              ),
              
              #Fim da barra lateral da aba amostragem aleatória simples
@@ -117,6 +118,17 @@ server = function(input, output, session) {
     toggle(id = "txtout2", condition = input$checkbox=="medamostra")
     toggle(id = "txtout3", condition = input$checkbox=="medamostra")
     
+  })
+
+  
+  output$counter <- renderText({
+    if(!file.exists("counter.Rdata"))
+      counter<- 0
+    else
+      load(file="counter.Rdata")
+    counter <- counter + 1
+    save(counter, file="counter.Rdata")
+    paste0("Total de visitas: ", counter)
   })
   
   observe({  
