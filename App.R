@@ -33,8 +33,7 @@ ui = tagList(
                sliderInput("p", "Percentual Estimado da população %:", min = 1, max = 100, value = 50,
                            step = 1),
                sliderInput("me1", "Margem de erro %:", min = 1, max = 10, value = 2,
-                           step = 1),
-               h5(textOutput("counter"))
+                           step = 1)
              ),
              
              #Fim da barra lateral da aba amostragem aleatória simples
@@ -83,7 +82,8 @@ ui = tagList(
                             )
                           ),
                           h6("Como referenciar esta página"),
-                          h6("Alcoforado, L.F, Ross, S.D., Moraes, J.R.,outros colaboradores, Calculadora Amostral R-shiny. Disponível em <http://www.estatisticacomr.uff.br>. Acesso em [data]")
+                          h6("Alcoforado, L.F, Ross, S.D., Moraes, J.R.,outros colaboradores, Calculadora Amostral R-shiny. Disponível em <http://www.estatisticacomr.uff.br>. Acesso em [data]"),
+                          h5(textOutput("counter"))
                  )
                )
              )
